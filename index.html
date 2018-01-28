@@ -5,44 +5,122 @@
 	<title> Raweats | Home </title>
 </head>
 
-<header align="center" style="margin-top:35px;"> 
+<!-- <img src="raweatslogo.png" alt="Raw Eats Logo" style="width:120px;height:52.5px;" align="left" class="logo"> -->
 
-	<a href="index.html">Home</a> 
-	<a href="order.html">Order</a> 
-	<a href="plans.html">Plans</a>
-	<a href="gift.html">Gift</a>
-	<a href="aboutus.html">About Us</a>
-	<a href="contact.html">Contact</a>
-	<a href="delivery&returns.html">Delivery & Returns</a>
+<!-- Navigation Bar -->
 
-	<img src="raweatslogo.png" alt="Raw Eats Logo" style="width:160px;height:65px;" align="left" class="logo">
+<nav> 
+	
+</nav>
 
-	<br> <br> <hr class="menuline"> 
+<body>
+	<div class="header">
+		<img src="raweatslogo.png" alt="Raw Eats Logo" style="width:180px;height:80px;" align="center" class="logo">
+		<h3 style="display: inline;margin:0;font-size: 12pt; font-family: Avenir Light"> World Class Meals at Home </h3>
+	</div>
 
-</header>
+	<div id="navbar">
+  		<a href="index.html" class="active">Home</a>
+  		<a href="order.html">Order</a>
+  		<a href="plans.html">Plans</a>
+  		<a href="gift.html">Gift</a>
+  		<a href="aboutus.html">About Us</a>
+  		<a href="contact.html">Contact</a>
+  		<a href="delivery&returns.html">Delivery & Returns</a>
+	</div>
+</body>
 
 <style> 
 
-.menuline {
-	width:200%;
+	.logo {
+		position: relative;
+		left:-0;
+		border: #000000;
+		border-style: solid;
+		border-width: 1pt;
+	}
+	
+	body {
+ 		margin: 0;
+		font-size: 28px;
+	}
+
+	.header {
+ 	 background-color: #BADA55;
+  	padding: 30px;
+  	text-align: center;
+	}	
+
+	#navbar {
+  	overflow: hidden;
+  	background-color: white;
+	}
+
+	#navbar a {
+ 	 float: left;
+ 	 display: block;
+  		color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.logo {
-	position: relative;
-	top:-20px;
-	left: 50px;
+#navbar a:hover {
+  background-color: #BADA55;
+  color: white;
 }
 
-a:link, a:visited {
-	padding-right: 15px;
-	padding-left: 15px;
-	color:black;
-	text-decoration: none;
+#navbar a.active {
+  background-color: #BADA55;
+  color: white;
 }
 
-a:hover {
-	color:#BADA55;
-	text-decoration: none;
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<!-- Content -->
+
+</header>
+
+<style>
+
+nav {
+	background-color: white;
+	position: sticky;
+}
+
+body {
+	background:url(background.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 * {
@@ -52,6 +130,8 @@ a:hover {
 * {
 	margin-left: 0px;
 	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 </style>
